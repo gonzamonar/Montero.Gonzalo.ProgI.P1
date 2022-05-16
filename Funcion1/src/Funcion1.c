@@ -11,15 +11,14 @@ Realizar la llamada desde el main.
 #include <stdio.h>
 #include <stdlib.h>
 
-int aplicarDescuento(float precio, float descuento);
+int aplicarDescuento(float precio);
 
 
 int main(void) {
-	float precio = 2500;
+	float precio = 100;
 	float precioConDescuento;
-	int descuento = 25;
 
-	precioConDescuento = aplicarDescuento(precio, descuento);
+	precioConDescuento = aplicarDescuento(precio);
 
 	printf("El precio con descuento es: $%.2f", precioConDescuento);
 
@@ -27,10 +26,8 @@ int main(void) {
 }
 
 
-int aplicarDescuento(float precio, float descuento){
-	float precioConDescuento;
-	if(descuento >= 0){
-		precioConDescuento = precio * (1-(descuento*0.01));
-	}
-	return precioConDescuento;
+int aplicarDescuento(float precio){
+	float preciodescontado;
+	preciodescontado = precio * (1-(5*0.01));
+	return preciodescontado;
 }
